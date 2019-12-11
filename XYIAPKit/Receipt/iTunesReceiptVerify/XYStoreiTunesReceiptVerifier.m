@@ -7,7 +7,7 @@
 
 #import "XYStoreiTunesReceiptVerifier.h"
 #import "XYStore.h"
-#import "YYModel.h"
+#import "YYKit.h"
 #import "XYiTunesResponse.h"
 
 NSString *const XYStoreiTunesVerifyReceiptURL = @"https://buy.itunes.apple.com/verifyReceipt";
@@ -265,7 +265,7 @@ NSString *const XYCachePreferenceKeyPrefix = @"xy_cache_pre_key_prefix";
     NSString *key = [self verifiedReceiptPrefrenceKey:transaction.payment.productIdentifier
                                   applicationUsername:transaction.payment.applicationUsername];
     [self.verifiedReceipts setValue:response forKey:key];
-    NSString *responseJSON = [response yy_modelToJSONString];
+    NSString *responseJSON = [response modelToJSONString];
     [[NSUserDefaults standardUserDefaults] setValue:responseJSON forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -293,7 +293,7 @@ NSString *const XYCachePreferenceKeyPrefix = @"xy_cache_pre_key_prefix";
     }
     
     if (response) {
-        return [XYiTunesResponse yy_modelWithDictionary:response];
+        return [XYiTunesResponse modelWithDictionary:response];
     }
     
     return nil;

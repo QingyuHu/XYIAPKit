@@ -1,15 +1,17 @@
 PODS:
-  - XYIAPKit (0.8.0):
-    - XYIAPKit/Core (= 0.8.0)
-  - XYIAPKit/Core (0.8.0)
-  - XYIAPKit/iTunesReceiptVerify (0.8.0):
+  - XYIAPKit (1.0.1):
+    - XYIAPKit/Core (= 1.0.1)
+  - XYIAPKit/Core (1.0.1)
+  - XYIAPKit/iTunesReceiptVerify (1.0.1):
     - XYIAPKit/Core
-    - YYModel (~> 1.0.4)
-  - XYIAPKit/KeychainPersistence (0.8.0):
+    - YYKit (= 1.0.9.1)
+  - XYIAPKit/KeychainPersistence (1.0.1):
     - XYIAPKit/Core
-  - XYIAPKit/UserDefaultPersistence (0.8.0):
+  - XYIAPKit/UserDefaultPersistence (1.0.1):
     - XYIAPKit/Core
-  - YYModel (1.0.4)
+  - YYKit (1.0.9.1):
+    - YYKit/no-arc (= 1.0.9.1)
+  - YYKit/no-arc (1.0.9.1)
 
 DEPENDENCIES:
   - XYIAPKit (from `../`)
@@ -18,14 +20,18 @@ DEPENDENCIES:
   - XYIAPKit/KeychainPersistence (from `../`)
   - XYIAPKit/UserDefaultPersistence (from `../`)
 
+SPEC REPOS:
+  "git@gitee.com:vgtime/VGTSpecs.git":
+    - YYKit
+
 EXTERNAL SOURCES:
   XYIAPKit:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  XYIAPKit: c23e2e8d2ef93fb3bc1c0de84994d14087a4e12c
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  XYIAPKit: 6602ba647e5cb46452f5d65caa909d48ee994546
+  YYKit: 44ace0f80c2afc1b5651cb403510698f84262a04
 
-PODFILE CHECKSUM: 5f1f7fbf904c79ff7cac5ef70af99f42a80d8023
+PODFILE CHECKSUM: 6b1c2c11318767af96614e7809548e08768c4001
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.8.4

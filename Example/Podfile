@@ -1,4 +1,8 @@
+inhibit_all_warnings!
 use_frameworks!
+
+source 'git@gitee.com:vgtime/VGTSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'XYIAPKit_Example' do
   pod 'XYIAPKit', :path => '../'

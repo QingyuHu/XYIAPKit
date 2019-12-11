@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYIAPKit'
-  s.version          = '1.0.1'
+  s.version          = '1.0.1.1'
   s.summary          = 'In App purchase sdk, support auto-renewable subscription'
   s.description      = <<-DESC
   
@@ -57,7 +57,8 @@ Pod::Spec.new do |s|
   s.subspec 'iTunesReceiptVerify' do |it|
     it.dependency 'XYIAPKit/Core'
     it.source_files = 'XYIAPKit/Receipt/iTunesReceiptVerify/*.{h,m}'
-    it.dependency 'YYModel', '~> 1.0.4'
+    it.dependency 'YYKit', '1.0.9.1'
+    
   end
 
 end
